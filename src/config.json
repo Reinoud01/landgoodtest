@@ -1,0 +1,11 @@
+{
+    "hero-image": "src/images/hero.jpg",
+    "feature-interior": "src/images/interior.jpg",
+    "feature-garden": "src/images/garden.jpg",
+    "feature-architecture": "src/images/architecture.jpg",
+    "team-thomas": "src/images/team-thomas.jpg",
+    "team-jan": "src/images/team-jan.jpg",
+    "team-peter": "src/images/team-peter.jpg",
+    "gallery-nature": "src/images/gallery-nature.jpg",
+    "gallery-interior": "src/images/gallery-interior.jpg"
+}
