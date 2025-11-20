@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-green': '#2F5C46', // Approximated from design
-        'brand-light-green': '#E8F5E9',
-        'brand-dark': '#1A1A1A',
+        'brand-sage': '#9CB79E', // Main background green
+        'brand-sage-light': '#C8DBC9', // Lighter accent
+        'brand-dark': '#1B3123', // Dark text
+        'brand-white': '#FDFDFD',
         'brand-gray': '#F5F5F5',
       },
       fontFamily: {
