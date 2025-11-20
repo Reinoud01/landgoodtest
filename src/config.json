@@ -1,8 +1,9 @@
 {
     "hero-image": "src/images/nwhero.jpg",
-    "feature-interior": "src/images/interior.jpg",
-    "feature-garden": "src/images/garden.jpg",
-    "feature-architecture": "src/images/architecture.jpg",
+    "feature-fijne-woningen": "src/images/fijne-woningen.png",
+    "feature-biodiversiteit": "src/images/biodiversiteit.png",
+    "feature-gemeenschapszin": "src/images/gemeenschapszin.png",
+    "feature-perspectief": "src/images/perspectief-landgoederen.jpg",
     "team-floris": "src/images/team-floris.jpg",
     "team-steven": "src/images/team-steven.jpg",
     "team-adriaan": "src/images/team-adriaan.jpg",
