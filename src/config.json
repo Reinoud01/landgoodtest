@@ -1,11 +1,12 @@
 {
-    "hero-image": "src/images/nw hero.jpg",
+    "hero-image": "src/images/nwhero.jpg",
     "feature-interior": "src/images/interior.jpg",
     "feature-garden": "src/images/garden.jpg",
     "feature-architecture": "src/images/architecture.jpg",
     "team-thomas": "src/images/team-thomas.jpg",
-    "team-jan": "src/images/team-jan.jpg",
-    "team-peter": "src/images/team-peter.jpg",
+    "team-floris": "src/images/team-floris.jpg",
+    "team-steven": "src/images/team-steven.jpg",
+    "team-adriaan": "src/images/team-adriaan.jpg",
     "gallery-nature": "src/images/gallery-nature.jpg",
     "gallery-interior": "src/images/gallery-interior.jpg"
 }
