@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandGood - Toekomstbestendig Landgoed</title>
+    <title>LandGood - Landgoederen met toekomst</title>
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +67,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="pt-64 pb-20 px-6 min-h-screen flex flex-col justify-center">
+    <section class="pt-32 md:pt-64 pb-20 px-6 min-h-screen flex flex-col justify-center">
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -248,25 +248,25 @@
             <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Hebben we uw interesse gewekt?</h2>
             <p class="mb-12 font-bold">Neem contact met ons op.</p>
 
-            <form class="space-y-6 mb-24">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 mb-24">
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wide mb-2">Uw naam</label>
-                    <input type="text"
+                    <input type="text" name="naam" required
                         class="w-full border-b border-brand-dark py-2 focus:outline-none focus:border-brand-sage transition-colors">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wide mb-2">E-mailadres</label>
-                    <input type="email"
+                    <input type="email" name="email" required
                         class="w-full border-b border-brand-dark py-2 focus:outline-none focus:border-brand-sage transition-colors">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wide mb-2">Telefoonnummer</label>
-                    <input type="tel"
+                    <input type="tel" name="telefoon"
                         class="w-full border-b border-brand-dark py-2 focus:outline-none focus:border-brand-sage transition-colors">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wide mb-2">Uw vraag</label>
-                    <textarea rows="3"
+                    <textarea rows="3" name="vraag" required
                         class="w-full border-b border-brand-dark py-2 focus:outline-none focus:border-brand-sage transition-colors"></textarea>
                 </div>
                 <button type="submit"

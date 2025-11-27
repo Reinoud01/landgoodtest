@@ -1018,6 +1018,10 @@ video {
   padding-bottom: 6rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -1030,8 +1034,8 @@ video {
   padding-top: 2rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .text-center {
@@ -1262,10 +1266,6 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:gap-8 {
     gap: 2rem;
   }
@@ -1280,6 +1280,10 @@ video {
 
   .md\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .md\:pt-64 {
+    padding-top: 16rem;
   }
 
   .md\:text-3xl {
