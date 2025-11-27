@@ -11,7 +11,8 @@ module.exports = {
         'brand-gray': '#F5F5F5',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"Open Sans"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
       }
     },
   },

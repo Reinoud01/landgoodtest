@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" class="scroll-pt-36 scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -8,39 +8,76 @@
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="font-sans text-brand-dark antialiased bg-brand-sage">
 
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 p-6">
-        <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold">L</div>
+    <header class="fixed w-full top-0 z-50 p-6 bg-brand-sage">
+        <div class="container mx-auto max-w-6xl flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <img src="src/images/logo.png" alt="LandGood Logo" class="h-20">
+            </div>
             <div class="flex items-center gap-4">
-                <button class="bg-white px-4 py-1 rounded text-sm font-medium uppercase tracking-wide">Menu</button>
-                <div class="w-8 h-8 bg-brand-dark rounded-full flex items-center justify-center text-white">
+                <a href="#contact"
+                    class="bg-white px-4 py-1 rounded text-sm font-medium uppercase tracking-wide">Contact</a>
+                <button id="open-menu"
+                    class="w-8 h-8 bg-brand-dark rounded-full flex items-center justify-center text-white">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                </div>
+                </button>
             </div>
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-sage z-40 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-center">
+        <button id="close-menu"
+            class="absolute top-6 right-6 w-8 h-8 bg-brand-dark rounded-full flex items-center justify-center text-white">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <nav class="flex flex-col gap-8 text-center">
+            <a href="#visie"
+                class="text-2xl font-serif font-bold text-brand-dark hover:text-white transition-colors menu-link">Onze
+                visie</a>
+            <a href="#voordelen"
+                class="text-2xl font-serif font-bold text-brand-dark hover:text-white transition-colors menu-link">Wat
+                levert dit uw landgoed op</a>
+            <a href="#team"
+                class="text-2xl font-serif font-bold text-brand-dark hover:text-white transition-colors menu-link">Met
+                wie heeft u te maken?</a>
+            <a href="#werkwijze"
+                class="text-2xl font-serif font-bold text-brand-dark hover:text-white transition-colors menu-link">Wat
+                doen wij?</a>
+            <a href="#contact"
+                class="text-2xl font-serif font-bold text-brand-dark hover:text-white transition-colors menu-link">Hebben
+                wij uw interesse gewekt?</a>
+            <a href="#faq"
+                class="text-2xl font-serif font-bold text-brand-dark hover:text-white transition-colors menu-link">Veel
+                gestelde vragen</a>
+        </nav>
+    </div>
+
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 min-h-screen flex flex-col justify-center">
+    <section class="pt-64 pb-20 px-6 min-h-screen flex flex-col justify-center">
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-md">
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-md">
                         Wij creëren een toekomstbestendig plan voor landgoedeigenaar, senior, en natuur.
                     </h1>
                 </div>
                 <div class="relative">
-                    <img src="/src/images/nwhero.jpg" alt="Landgoed luchtfoto"
-                        class="rounded-lg shadow-xl w-full object-cover aspect-[4/3]">
+                    <img src="src/images/hero-header.jpg" data-img-key="hero-image" alt="Landgoed luchtfoto"
+                        class="rounded-lg shadow-xl w-full object-cover aspect-[4/3] border-2 border-[#EBFFB2]">
                 </div>
             </div>
 
@@ -87,54 +124,57 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="py-24 bg-white px-6">
+    <section id="visie" class="py-24 bg-white px-6">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-brand-sage text-xl font-medium mb-8">Onze visie</h2>
+            <h2 class="font-serif text-brand-sage text-3xl md:text-4xl font-bold mb-16">Onze visie</h2>
             <p class="text-2xl md:text-3xl font-bold leading-snug mb-12">
-                Wij geloven dat de mooiste plekken in Nederland bewaard moeten blijven en dat nieuwe natuur ontwikkeld
-                moet worden. Door landgoederen te creëren, zorgen we voor een duurzame toekomst voor het landschap en
-                een unieke woonplek voor de eigenaar.
+                Wij geloven dat landgoederen opnieuw een centrale rol kunnen spelen in het landschap en de samenleving.
+                Dat doen we door het ontwikkelen van kleinschalige woonclusters in erfpacht, gericht op ouderen die
+                bewust kiezen voor een natuurlijker leven, zingeving en gemeenschapszin. In combinatie met een
+                voedselbos ontstaat een nieuwe drager voor het landgoed, die ook bijdraagt aan biodiversiteit en
+                recreatieve waarde.
             </p>
-            <a href="#"
+            <a href="beweegredenen.html"
                 class="inline-block border border-brand-dark px-6 py-3 rounded text-sm font-bold uppercase tracking-wide hover:bg-brand-dark hover:text-white transition-colors">
-                Lees meer over ons
+                Lees meer over onze beweegredenen
             </a>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-24 bg-brand-sage px-6">
+    <section id="voordelen" class="py-24 bg-brand-sage px-6">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16">Wat levert een landgoed op?</h2>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-16">Wat levert dit uw landgoed op?</h2>
 
             <div class="space-y-12">
                 <div class="max-w-lg mx-auto">
                     <h3 class="font-bold mb-2">Financieel</h3>
-                    <p class="text-sm leading-relaxed">Fiscale voordelen (NSW-rangschikking), waardestijging van de
-                        grond en mogelijkheden voor subsidies.</p>
+                    <p class="text-sm leading-relaxed">Een structurele inkomstenbron via erfpacht, zonder verkoop van
+                        gronden.</p>
                 </div>
 
                 <div class="max-w-lg mx-auto">
                     <h3 class="font-bold mb-2">Ecologisch</h3>
-                    <p class="text-sm leading-relaxed">Versterking van biodiversiteit, CO2-opslag en behoud van
-                        cultuurhistorisch landschap.</p>
+                    <p class="text-sm leading-relaxed">Verbetering van de landschappelijke kwaliteit, door
+                        natuurinclusief bouwen, een voedselbos en landschappelijke inpassing.</p>
                 </div>
 
                 <div class="max-w-lg mx-auto">
                     <h3 class="font-bold mb-2">Persoonlijk</h3>
-                    <p class="text-sm leading-relaxed">Een unieke plek om te wonen, rust, ruimte en nalatenschap voor
-                        volgende generaties.</p>
+                    <p class="text-sm leading-relaxed">Meer verbinding met de omgeving, door functies zoals educatie,
+                        zorg, natuurbeleving en maatschappelijke betrokkenheid.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-24 bg-white px-6">
+    <section id="team" class="py-24 bg-white px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16">Met wie heeft u te maken?</h2>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-16">Met wie heeft u te maken?</h2>
             <p class="max-w-2xl mb-12 text-lg">
-                Ons team bestaat uit experts op het gebied van landschapsarchitectuur, vastgoedontwikkeling en ecologie.
+                We werken met een team van experts. Zowel voor rood, als groen. Door jarenlang bestuur op een landgoed
+                weten we waar we het over hebben en spreken we uw taal.
             </p>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -164,12 +204,18 @@
     </section>
 
     <!-- Values Section -->
-    <section class="py-24 bg-white px-6">
+    <section id="werkwijze" class="py-24 bg-white px-6">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">Wat doen wij?</h2>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8">Wat doen wij?</h2>
             <p class="text-lg leading-relaxed mb-8">
-                Wij begeleiden het gehele proces: van de eerste schets tot de uiteindelijke realisatie. Wij verzorgen de
-                vergunningen, het landschapsontwerp en de bouwbegeleiding.
+                Wij bieden een volledig begeleid traject – van ruimtelijke inpassing en bestuurlijke afstemming tot het
+                vinden van ontwikkelpartners. U houdt zelf de regie, wij zorgen voor de inhoudelijke en procesmatige
+                uitwerking.
+
+                Een eerste gesprek is altijd vrijblijvend.
+
+                Benieuwd wat dit voor uw landgoed zou kunnen betekenen? Neem gerust contact met ons op. We denken graag
+                mee, op maat en met oog voor de unieke identiteit van uw terrein.
             </p>
             <p class="text-lg leading-relaxed">
                 Onze aanpak is persoonlijk en betrokken. Wij luisteren naar uw wensen en vertalen deze naar een concreet
@@ -182,19 +228,17 @@
     <section class="py-12 bg-brand-sage px-6">
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-2 gap-6">
-                <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1000&auto=format&fit=crop"
-                    alt="Natuur" class="w-full h-80 object-cover rounded-lg">
-                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop"
-                    alt="Interieur" class="w-full h-80 object-cover rounded-lg">
+                <img src="src/images/gallery-exterior.jpg" alt="Natuur" class="w-full h-80 object-cover rounded-lg">
+                <img src="src/images/gallery-interior.png" alt="Interieur" class="w-full h-80 object-cover rounded-lg">
             </div>
         </div>
     </section>
 
     <!-- Contact/Footer Section -->
-    <section class="py-24 bg-white px-6">
+    <section id="contact" class="py-24 bg-white px-6">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Hebben we uw interesse gewekt?</h2>
-            <p class="mb-12 font-bold">Neem contact op.</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Hebben we uw interesse gewekt?</h2>
+            <p class="mb-12 font-bold">Neem contact met ons op.</p>
 
             <form class="space-y-6 mb-24">
                 <div>
@@ -224,33 +268,114 @@
             </form>
 
             <!-- FAQ / Links -->
-            <div class="bg-brand-sage p-12 rounded-lg">
-                <h3 class="text-xl font-bold mb-8 text-white">Veelgestelde vragen</h3>
+            <div id="faq" class="bg-brand-sage p-12 rounded-lg">
+                <h3 class="font-serif text-3xl md:text-4xl font-bold mb-8 text-white">Veelgestelde vragen</h3>
                 <div class="space-y-4">
                     <details class="group cursor-pointer">
                         <summary class="flex justify-between items-center font-medium list-none">
-                            <span>Wat zijn de kosten van een landgoed?</span>
+                            <span>Wat is Landgood?</span>
                             <span class="transition group-open:rotate-180">+</span>
                         </summary>
-                        <p class="mt-4 text-sm text-brand-dark/80">De kosten variëren sterk afhankelijk van de locatie
-                            en omvang.</p>
+                        <p class="mt-4 text-sm text-brand-dark/80">Landgood helpt landgoedeigenaren door het ontwikkelen
+                            van kleinschalige woonclusters in erfpacht, gericht op ouderen die bewust kiezen voor een
+                            natuurlijker leven, zingeving en gemeenschapszin. Dit gecombineerd met voedselbossen zorgt
+                            voor een duurzame inkomstenstroom.</p>
                     </details>
                     <div class="h-px bg-brand-dark/20"></div>
                     <details class="group cursor-pointer">
                         <summary class="flex justify-between items-center font-medium list-none">
-                            <span>Hoe lang duurt het traject?</span>
+                            <span>Is dit überhaupt wel mogelijk met mijn landgoed?</span>
                             <span class="transition group-open:rotate-180">+</span>
                         </summary>
-                        <p class="mt-4 text-sm text-brand-dark/80">Gemiddeld duurt een traject 2 tot 3 jaar.</p>
+                        <p class="mt-4 text-sm text-brand-dark/80">Elk landgoed is uniek. Tijdens een vrijblijvend
+                            gesprek bekijken we samen de mogelijkheden voor uw specifieke situatie, rekening houdend met
+                            bestemmingsplannen en omgevingsvisie, ligging en uw wensen als eigenaar.</p>
                     </details>
                     <div class="h-px bg-brand-dark/20"></div>
                     <details class="group cursor-pointer">
                         <summary class="flex justify-between items-center font-medium list-none">
-                            <span>Kan ik op mijn eigen grond bouwen?</span>
+                            <span>Hoe lang duurt een dergelijk traject?</span>
                             <span class="transition group-open:rotate-180">+</span>
                         </summary>
-                        <p class="mt-4 text-sm text-brand-dark/80">Ja, mits het bestemmingsplan dit toelaat of gewijzigd
-                            kan worden.</p>
+                        <p class="mt-4 text-sm text-brand-dark/80">Een volledig traject duurt gemiddeld 4 tot 10 jaar,
+                            afhankelijk van de complexiteit en bestuurlijke procedures. We begeleiden u stap voor stap
+                            door het hele proces. Omdat we de ervaring hebben dat de processen lang duren, kunnen we
+                            maar beter vroeg beginnen. En aangezien wij dat met relatief lage kosten kunnen doen, is het
+                            voor u op dit moment een kleine stap.</p>
+                    </details>
+                    <div class="h-px bg-brand-dark/20"></div>
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>Wat kost jullie advies?</span>
+                            <span class="transition group-open:rotate-180">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm text-brand-dark/80">Een eerste gesprek is altijd vrijblijvend. Daarna
+                            stellen we een voorstel op maat op, afgestemd op de omvang en complexiteit van uw project.
+                            We werken transparant en bespreken alle kosten vooraf. Maar ga er vanuit dat het in beginsel
+                            niet enorme kosten met zich meebrengt. We stellen een gecombineerde visie (die van uw
+                            landgoed icm de visie van Landgood) op die we toetsten bij de gemeente. Pas als we het idee
+                            krijgen dat de gemeente de visie deelt gaan we volgende stappen zetten.</p>
+                    </details>
+                    <div class="h-px bg-brand-dark/20"></div>
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>Ik heb al een rentmeester. Zijn jullie niet wat overbodig?</span>
+                            <span class="transition group-open:rotate-180">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm text-brand-dark/80">Absoluut niet! We werken juist graag samen met uw
+                            rentmeester. Wij brengen specifieke expertise in op het gebied van ontwikkeling,
+                            agroforestry en natuurinclusief bouwen, als aanvulling op de bestaande kennis. Uw
+                            rentmeester heeft de meeste lokale kennis en mogelijk (samen met uw) de juiste contacten bij
+                            de gemeente of provincie. Wij kunnen een totaalpakket bieden, inclusief landschapsarchitect,
+                            ontwikkelaar, en groenexpert.</p>
+                    </details>
+                    <div class="h-px bg-brand-dark/20"></div>
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>Wie komen er op ons landgoed te wonen en hebben we daar geen last van?</span>
+                            <span class="transition group-open:rotate-180">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm text-brand-dark/80">De woningen zijn specifiek bedoeld voor ouderen die
+                            bewust kiezen voor een natuurrijke omgeving, gemeenschapszin en een betekenisvolle
+                            levensfase. Door het erfpachtmodel behoud u als eigenaar zeggenschap. We toetsen bij de
+                            gemeente waar behoefte aan is, en scherpen zo onze visie en uiteindelijk plan aan, om de
+                            slagingskans zo groot mogelijk te maken. We kijken samen naar een geschilkte locatie zodat
+                            de privacy van het huidige landgoed indien wenselijk blijft bestaan. Ook kijken we hoe de
+                            nieuwe woningen passen binnen het landschap.</p>
+                    </details>
+                    <div class="h-px bg-brand-dark/20"></div>
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>Wat is een voedselbos?</span>
+                            <span class="transition group-open:rotate-180">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm text-brand-dark/80">Een voedselbos is een natuurlijk ecosysteem waarin
+                            eetbare gewassen, struiken en bomen samen groeien. Het bevordert biodiversiteit, verbetert
+                            de bodemkwaliteit en biedt tegelijkertijd oogst en educatieve waarde. Iets waar gemeentes
+                            over het algemeen enthousiast van worden, en het is ook een zeer welkome en aantrekkelijke
+                            aanvulling op uw landgoed. Het is daarnaast noorzakelijk om het stuk rood voor elkaar te
+                            krijgen.</p>
+                    </details>
+                    <div class="h-px bg-brand-dark/20"></div>
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>Over hoe veel woningen hebben we het?</span>
+                            <span class="transition group-open:rotate-180">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm text-brand-dark/80">We denken aan kleinschalige clusters van 15 tot 20
+                            woningen/appartementen per locatie. De exacte omvang bepalen we samen op basis van de
+                            draagkracht van uw landgoed en uw wensen als eigenaar.</p>
+                    </details>
+                    <div class="h-px bg-brand-dark/20"></div>
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>Wat kan dit ons landgoed opleveren?</span>
+                            <span class="transition group-open:rotate-180">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm text-brand-dark/80">Met deze woningen kan erfpacht worden verdiend, wat
+                            over het algemeen hoger is dan pacht op agrarische gronden. Het is altijd een afweging
+                            tussen initiële verkoopprijs, en erfpacht. Dat is een samenspel tussen ontwikkelaar en
+                            grondeigenaar.</p>
                     </details>
                 </div>
             </div>
@@ -265,6 +390,24 @@
         </div>
     </section>
 
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openMenuBtn = document.getElementById('open-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        openMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
 </body>
 
 </html>
